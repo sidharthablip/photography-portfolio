@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Marlowe Sterling | Cinematic Photography</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=DM+Sans:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "primary": "#f2ca50",
+                        "on-surface": "#e2e2e2",
+                        "surface-dim": "#121414",
+                        "outline": "#99907c",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-tertiary": "#313030",
+                        "surface": "#121414",
+                        "surface-tint": "#e9c349",
+                        "outline-variant": "#4d4635",
+                        "background": "#0A0A0A",
+                        "surface-container-lowest": "#0c0f0f",
+                        "inverse-primary": "#735c00",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "surface-container": "#1e2020",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#333535",
+                        "on-surface-variant": "#d0c5af",
+                        "tertiary-container": "#b5b2b2",
+                        "tertiary": "#d0cecd",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#bab8b7",
+                        "on-secondary": "#313030",
+                        "on-primary-fixed": "#241a00",
+                        "secondary": "#c9c6c5",
+                        "primary-container": "#d4af37",
+                        "surface-container-low": "#1a1c1c",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-error": "#690005",
+                        "surface-bright": "#38393a",
+                        "on-tertiary-container": "#454545",
+                        "on-secondary-fixed-variant": "#474646",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e2e2e2",
+                        "surface-variant": "#333535",
+                        "on-primary-container": "#554300",
+                        "surface-container-high": "#282a2b",
+                        "secondary-container": "#4a4949",
+                        "on-primary": "#3c2f00",
+                        "inverse-on-surface": "#2f3131",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-background": "#e2e2e2",
+                        "primary-fixed": "#ffe088"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "stack-md": "16px",
+                        "gutter": "32px",
+                        "section-gap": "160px",
+                        "edge-margin-desktop": "80px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "edge-margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["DM Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "caption": ["DM Sans"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-md": ["DM Sans"],
+                        "label-caps": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "caption": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "38px", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "500" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            background-color: #0A0A0A;
+            color: #e2e2e2;
+            overflow-x: hidden;
+        }
+
+        .gallery-item:hover .ghost-border {
+            opacity: 1;
+            transform: scale(1.02);
+        }
+
+        .ghost-border {
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        .primary-button {
+            border: 1px solid #D4AF37;
+            padding: 12px 32px;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .primary-button:hover {
+            background-color: #D4AF37;
+            color: #0A0A0A;
+        }
+
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+        }
+    </style>
+</head>
+
+<body class="font-body-md">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-primary/20">
+        <div
+            class="flex justify-between items-center px-edge-margin-mobile md:px-edge-margin-desktop py-stack-md w-full max-w-container-max mx-auto">
+            <a class="font-display-lg text-[24px] md:text-headline-md tracking-tighter text-primary" href="#">M</a>
+            <div class="hidden md:flex space-x-10">
+                <a class="font-label-caps text-label-caps tracking-widest text-primary border-b border-primary pb-1"
+                    href="#featured">Portfolio</a>
+                <a class="font-label-caps text-label-caps tracking-widest text-on-surface/70 hover:text-primary transition-all duration-300"
+                    href="#about">About</a>
+                <a class="font-label-caps text-label-caps tracking-widest text-on-surface/70 hover:text-primary transition-all duration-300"
+                    href="#exhibition">Exhibition</a>
+                <a class="font-label-caps text-label-caps tracking-widest text-on-surface/70 hover:text-primary transition-all duration-300"
+                    href="#contact">Contact</a>
+            </div>
+            <a class="primary-button font-label-caps text-[10px] md:text-label-caps" href="#contact">Book a Session</a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Hero background" class="w-full h-full object-cover opacity-60 scale-105"
+                src="./Images/camera.JPG" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/50"></div>
+        </div>
+        <div class="relative z-10 text-center px-edge-margin-mobile">
+            <h1
+                class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-stack-sm tracking-tight">
+                Marlowe Sterling</h1>
+            <p class="font-label-caps text-label-caps tracking-[0.4em] uppercase text-on-surface/80">Cinematic Vision •
+                Visual Narratives • Editorial Precision</p>
+            <div class="mt-stack-lg flex justify-center gap-stack-md">
+                <a class="material-symbols-outlined text-primary text-[48px] animate-bounce mt-10"
+                    href="#featured">expand_more</a>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-section-gap px-edge-margin-mobile md:px-edge-margin-desktop max-w-container-max mx-auto"
+        id="about">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-5 relative aspect-[4/5] overflow-hidden group">
+                <img alt="Photographer Portrait"
+                    class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    src="./Images/Rishi.jpeg" />
+                <div class="absolute inset-0 border border-primary/20 pointer-events-none"></div>
+            </div>
+            <div class="md:col-span-6 md:col-start-7 mt-stack-lg md:mt-0">
+                <span class="font-label-caps text-label-caps text-primary tracking-widest mb-stack-sm block">THE
+                    PHILOSOPHY</span>
+                <h2
+                    class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-stack-lg leading-tight">
+                    Capturing the quiet intensity between moments.</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-xl">
+                    Photography is more than technical execution; it is a structural dialogue between light and shadow.
+                    My work draws inspiration from high-end fashion monographs and cinematic noir, prioritizing
+                    deliberate composition over accidental snapshots.
+                </p>
+                <p class="font-body-md text-body-md text-on-surface/60 italic border-l-2 border-primary/40 pl-stack-md">
+                    "The frame is a curated silence. What we leave out is just as vital as what we keep in."
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Work - Editorial Bento Grid -->
+    <section class="bg-surface-container-lowest py-section-gap" id="featured">
+        <div class="max-w-container-max mx-auto px-edge-margin-mobile md:px-edge-margin-desktop">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg">
+                <div>
+                    <span
+                        class="font-label-caps text-label-caps text-primary tracking-widest mb-stack-sm block">SELECTED
+                        WORKS</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Featured
+                        Portfolio</h2>
+                </div>
+                <p class="font-caption text-caption text-on-surface-variant/60 max-w-xs mt-4 md:mt-0">
+                    A curated selection of commercial and lifestyle narratives.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-stack-md">
+                <!-- Large Feature -->
+                <div class="md:col-span-8 aspect-video relative overflow-hidden group gallery-item">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A close-up, high-contrast monochrome image of two puppies touching noses in a tender, cinematic moment. The lighting is soft and directional, highlighting the textures of their fur against a blurred, dark background. The mood is intimate and serene, capturing a pure emotional connection in a luxury editorial photography style with deep blacks and rich tonal variations."
+                        src="./Images/3.JPG" />
+                    <div class="absolute inset-0 ghost-border opacity-0"></div>
+                </div>
+                <!-- Tall Portrait -->
+                <div class="md:col-span-4 aspect-[3/4] relative overflow-hidden group gallery-item">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A professional portrait of a man in a sharp black suit, captured in a warm, low-light environment. The background features blurred glowing lights that create a sophisticated, upscale atmosphere. The subject has a confident expression, with subtle golden highlights tracing the contours of his face and suit, embodying a premium, editorial portrait aesthetic suited for a luxury magazine."
+                        src="./Images/IMG_0991.JPG" />
+                    <div class="absolute inset-0 ghost-border opacity-0"></div>
+                </div>
+                <!-- Dynamic Horizontal -->
+                <div class="md:col-span-4 aspect-square relative overflow-hidden group gallery-item">
+                    <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A high-precision shot of a professional camera mounted on a high-tech gimbal stabilizer. The lighting is warm and cinematic, featuring amber glows and sharp highlights on the metallic surfaces of the equipment. The perspective is a dynamic low-angle, emphasizing the technical complexity and premium quality of the gear in a dark, moody studio setting."
+                        src="./Images//dogs.JPG" />
+                    <div class="absolute inset-0 ghost-border opacity-0"></div>
+                </div>
+                <!-- Placeholder grid for balance -->
+                <div
+                    class="md:col-span-4 aspect-square bg-[#111111] flex items-center justify-center border border-primary/10">
+                    <img class="w-full h-full object-cover grayscale opacity-40 hover:opacity-80 transition-opacity duration-500"
+                        data-alt="A minimalist architectural detail of a modern concrete building with sharp shadows and high-contrast lighting. The composition is geometric and clean, following the cinematic minimalism style. Deep charcoal tones dominate the frame, punctuated by a single streak of bright, directional sunlight. The atmosphere is quiet, exclusive, and structurally rigorous."
+                        src="./Images/IMG_2435.JPG" />
+                </div>
+                <div
+                    class="md:col-span-4 aspect-square bg-[#111111] flex items-center justify-center border border-primary/10">
+                    <img class="w-full h-full object-cover grayscale opacity-40 hover:opacity-80 transition-opacity duration-500"
+                        data-alt="A moody, high-end commercial shot of a luxury watch resting on a piece of dark obsidian. The lighting is extremely focused, revealing only the metallic edges and the intricate face of the timepiece. The scene is shrouded in blackspace, creating a sense of prestige and exclusivity. Subtle golden reflections dance on the polished surfaces, echoing the brand's luxury color palette."
+                        src="./Images/5.JPG" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Gallery -->
+    <section class="py-section-gap px-edge-margin-mobile md:px-edge-margin-desktop" id="exhibition">
+
+        <div class="max-w-container-max mx-auto text-center mb-stack-lg">
+            <span class="font-label-caps text-label-caps text-primary tracking-[0.5em] block mb-stack-sm">
+                PORTFOLIO
+            </span>
+
+            <h2 class="font-headline-lg text-display-lg-mobile md:text-headline-lg mb-stack-md">
+                Selected Works
+            </h2>
+
+            <!-- Category Filter -->
+            <div class="flex flex-wrap justify-center gap-stack-md mt-stack-lg">
+                <button class="font-label-caps text-label-caps border-b-2 border-primary pb-1 text-primary">
+                    All Works
+                </button>
+
+                <button
+                    class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-primary transition-colors">
+                    Nature
+                </button>
+
+                <button
+                    class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-primary transition-colors">
+                    Marriage
+                </button>
+
+                <button
+                    class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-primary transition-colors">
+                    Commercial
+                </button>
+
+                <button
+                    class="font-label-caps text-label-caps text-on-surface-variant/60 hover:text-primary transition-colors">
+                    Events
+                </button>
+            </div>
+        </div>
+
+        <!-- Masonry Gallery -->
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-stack-md space-y-stack-md">
+
+            <!-- Image 1 -->
+            <div class="relative overflow-hidden group gallery-item break-inside-avoid">
+                <img loading="lazy" src="./Images/IMG_0751.JPG" alt="Nature Photography"
+                    class="w-full transition-all duration-700 group-hover:scale-105" />
+
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="font-label-caps text-primary">Nature</span>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="relative overflow-hidden group gallery-item break-inside-avoid">
+                <img loading="lazy" src="./Images/IMG_2418.JPG" alt="Marriage Photography"
+                    class="w-full transition-all duration-700 group-hover:scale-105" />
+
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="font-label-caps text-primary">Marriage</span>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="relative overflow-hidden group gallery-item break-inside-avoid">
+                <img loading="lazy" src="./Images/2.JPG" alt="Commercial Photography"
+                    class="w-full transition-all duration-700 group-hover:scale-105" />
+
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="font-label-caps text-primary">Commercial</span>
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="relative overflow-hidden group gallery-item break-inside-avoid">
+                <img loading="lazy" src="./Images/IMG_9375.JPEG" alt="Event Photography"
+                    class="w-full transition-all duration-700 group-hover:scale-105" />
+
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="font-label-caps text-primary">Events</span>
+                </div>
+            </div>
+
+            <!-- Continue for photo05 to photo50 -->
+
+        </div>
+
+        <div class="mt-section-gap flex justify-center">
+            <button class="primary-button group">
+                Browse Portfolio
+                <span
+                    class="material-symbols-outlined align-middle ml-2 group-hover:translate-x-1 transition-transform">
+                    arrow_forward
+                </span>
+            </button>
+        </div>
+
+    </section>
+    <!-- Contact Section -->
+    <section class="py-section-gap bg-surface-container-low border-t border-primary/10" id="contact">
+        <div class="max-w-container-max mx-auto px-edge-margin-mobile md:px-edge-margin-desktop text-center">
+            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-stack-lg">Let's
+                craft your narrative.</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-stack-lg md:gap-[120px]">
+                <div class="text-center group">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">GENERAL
+                        ENQUIRIES</span>
+                    <a class="font-headline-md text-on-surface hover:text-primary transition-colors"
+                        href="mailto:hello@marlowesterling.com">hello@marlowesterling.com</a>
+                </div>
+                <div class="text-center group">
+                    <span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">SOCIAL
+                        CHANNELS</span>
+                    <a class="font-headline-md text-on-surface hover:text-primary transition-colors"
+                        href="https://www.instagram.com/rishi_capturess/">@rishi_capturess</a>
+                </div>
+            </div>
+            <div class="mt-section-gap">
+                <a class="text-[32px] md:text-[64px] font-display-lg text-on-surface hover:text-primary transition-all duration-500 underline decoration-primary/20 hover:decoration-primary underline-offset-8"
+                    href="#">Collaboration Inquiries</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-primary/20">
+        <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-edge-margin-desktop py-stack-lg w-full max-w-container-max mx-auto items-center">
+            <div class="text-left">
+                <span class="font-headline-md text-headline-md text-primary">M</span>
+            </div>
+            <div class="text-center">
+                <p class="font-body-md text-body-md text-on-surface-variant opacity-80">© 2024 Cinematic Photography
+                    Portfolio. All Rights Reserved.</p>
+            </div>
+            <div class="flex justify-end gap-stack-md">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Instagram</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Vimeo</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Journal</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
+                    href="#">Privacy</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
